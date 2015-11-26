@@ -18,10 +18,11 @@ window_width = 800
 window_height = 600
 window_size = window_width, window_height
 
-gameDisplay = pagame.display.set_mode(widow_size)
-pagame.display.set_caption("Space Invaders")
+gameDisplay = pygame.display.set_mode(window_size)
+pygame.display.set_caption("Space Invaders")
 
 game_clock = pygame.time.Clock()
+game_clock.tick(60)
 ################################################################
 
 ################################################################
@@ -33,9 +34,9 @@ white = 255, 255, 255
 
 ################################################################
 # Import Images
-# xxx = pygame.image.load("images/img.png")
+# xxx = pygame.image.load("data/images/img.png")
 ################################################################
-startScreenBackground = None
+startScreenBackground = pygame.image.load("data/images/startScreen.png")
 gameBackground = None
 gameOverScreenBackground = None
 ################################################################
@@ -100,7 +101,8 @@ class SpaceInvaders:
 	################################################################	
 	def startScreen():
 		while true:
-			pass
+			gameDisplay.blit(startScreenImage,(0,0))
+			pygame.display.update()
 
 
 	################################################################
