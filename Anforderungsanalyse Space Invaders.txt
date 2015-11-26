@@ -1,0 +1,43 @@
+Anforderungsanalyse Space Invaders:
+
+16.11 Präsentation des Themas
+27.01 Präsentation des Projekts
+03.02 Abgabe des Proijekts
+
+Spieler:
+	links/rechts bewegen
+	kollision mit alienbullet
+	3 leben
+
+Alien:
+	3 typen (verschiedene punkte/verschiedene missiles)
+	5 reihen a 11 aliens
+	pro abgeschossenen alien geschwindigkeit erhöhen
+	kollisionsabfrage linker/rechter rand (1 reihe nach unten)
+	kollisionaabfrage mit "grundlinie" (wenn da dann game over)
+	welcher alien kann schiesen (alien ohne alien unter sich)
+
+Player bullet:
+	nur eine bullet aktiv
+	kollisionsabfrage mit aliens
+	kollisionsabfrage mit mothership
+	kollisionsabfrage mit bricks
+
+alien bullet:
+	kollisionsabfrage mit player
+	kollisionsabfrage mit brick
+
+mothership
+	verschiedene punkte(/powerups)
+
+brick
+	4 leben
+	4 bricks mit 4x3 elementen?
+
+sound
+	mit jeden schritt/alien animate (dö döh dö döh dö döh)
+	mothership sound
+
+
+sonstiges
+	alien flüssige animation vs alle x bilder
