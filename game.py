@@ -39,6 +39,7 @@ white = 255, 255, 255
 startScreenBackground = pygame.image.load("data/images/startScreen.png")
 gameBackground = None
 gameOverScreenBackground = None
+playerImage = pygame.image.load("data/images/player.png")
 ################################################################
 
 
@@ -103,8 +104,12 @@ def gameLoop():
         for event in pygame.event.get():
             if event.type == pygame.KEYUP:
                 if event.key == K_ESCAPE:
-       		    	pygame.quit()
+                    pygame.quit()
                     sys.exit(0)
+
+            print event
+        gameDisplay.fill(black)
+        pygame.display.update()
 
 ################################################################
 # Start Screen
@@ -118,6 +123,8 @@ def startScreen():
                 if event.key == K_ESCAPE:
                     pygame.quit()
                     sys.exit(0)
+                if event.key == K_RETURN:
+                    gameLoop()
 
         gameDisplay.blit(startScreenBackground, (0, 0))
         pygame.display.update()
