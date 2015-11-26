@@ -4,7 +4,7 @@
 # Imports
 ################################################################
 import sys
-sys.path.append("modules") #For PyGame
+sys.path.append("modules")  # For PyGame
 import pygame
 from pygame.locals import *
 ################################################################
@@ -42,83 +42,104 @@ gameOverScreenBackground = None
 ################################################################
 
 
-
-class SpaceInvaders:
-
-	class Player:
-		pass
-	
-	class Alien:
-		pass
-	
-	class Brick:
-		pass
-	
-	class Mothership:
-		pass
-
-	class Bullet:
-		pass
+class Player:
+    pass
 
 
-	def drawAliens():
-		pass
-	
-	def drawPlayer():
-		pass
-	
-	def drawAlienBullets():
-		pass
-	
-	def drawPlayerBullet():
-		pass
-
-	def drawMothership():
-		pass
-
-	def drawBricks():
-		pass
-	
-	################################################################
-	# Setup a new Game
-	################################################################
-	def setupNewGame():
-		pass
+class Alien:
+    pass
 
 
-	################################################################
-	# Game Loop
-	################################################################
-	def gameLoop():
-		while true:
-			for event in pygame.event.get():
-				if event.type == pygame.QUIT:
-					break
+class Brick:
+    pass
 
 
-	################################################################
-	# Start Screen
-	################################################################	
-	def startScreen():
-		while true:
-			gameDisplay.blit(startScreenImage,(0,0))
-			pygame.display.update()
+class Mothership:
+    pass
 
 
-	################################################################
-	# Game Over Screen
-	################################################################
-	def gameOverScreen():
-		while true:
-			pass
+class Bullet:
+    pass
 
 
-	def run():
-		startScreen()
+def drawAliens():
+    pass
 
+
+def drawPlayer():
+    pass
+
+
+def drawAlienBullets():
+    pass
+
+
+def drawPlayerBullet():
+    pass
+
+
+def drawMothership():
+    pass
+
+
+def drawBricks():
+    pass
+
+################################################################
+# Setup a new Game
+################################################################
+
+
+def setupNewGame():
+    pass
+
+################################################################
+# Game Loop
+################################################################
+
+
+def gameLoop():
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.KEYUP:
+                if event.key == K_ESCAPE:
+       		    	pygame.quit()
+                    sys.exit(0)
+
+################################################################
+# Start Screen
+################################################################
+
+
+def startScreen():
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.KEYUP:
+                if event.key == K_ESCAPE:
+                    pygame.quit()
+                    sys.exit(0)
+
+        gameDisplay.blit(startScreenBackground, (0, 0))
+        pygame.display.update()
+
+################################################################
+# Game Over Screen
+################################################################
+
+
+def gameOverScreen():
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.KEYUP:
+                if event.key == K_ESCAPE:
+                    pygame.quit()
+                    sys.exit(0)
 
 
 ################################################################
 # Hier wird das Spiel ausgefuehrt
 ################################################################
-SpaceInvaders.run()
+startScreen()
+
+pygame.quit()
+quit()
